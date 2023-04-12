@@ -1,5 +1,10 @@
-# Ecommerce Back-End 
+# NoSQL Social Network API
   [![License](https://img.shields.io/static/v1?label=License&message=MIT%20License&color=green)](LICENSE)
+  
+## Description
+  An API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. The data is stored in MongoDB.
+  
+  - Link to video walk-through: https://drive.google.com/file/d/1zk0Xt2I9w5UeH6SwJ6L5nQ5rDS9uQ2aP/view
 
   #### Table of contents:
   - [Description](#description)
@@ -7,30 +12,29 @@
   - [Usage](#usage)
   - [License](#license)
   ---
-  ## Description
-  This Node.js application is an Ecommerce Back-End API  
-  - Link to video walk-through: https://drive.google.com/file/d/1EBFiYqT3LCDhAptL19njZgVo6o8OxJlx/view
-
+  
   ## Installation
+  - Make sure MongoDB is isntalled on the machine
   - Install dependecies by running `npm i`
-  - Create the mysql database `source schema.sql` from the db folder
-  - Seed database `npm run seed`
   - Start server `npm start`
 
   ## Usage
     The API has a number of endpoints.
-    GET `/api/products/`, `/api/tags/`, `/api/categories/`
-    GET `/api/products/:id` , `/api/tags/:id`, `/api/categories/:id`
-    POST `/api/products/`, `/api/tags/`, `/api/categories/`
-    PUT `/api/products/:id` , `/api/tags/:id`, `/api/categories/:id`
-    DELETE `/api/products/:id` , `/api/tags/:id`, `/api/categories/:id`
+    - GET, POST, PUT, DELETE `/api/users`
+    - GET `/api/users/:userId`
+    - GET, POST, PUT, DELETE `/api/thoughts`
+    - GET `/api/thoughts/:thoughtId`
+    - POST, DELETE `/api/users/:userId/friends/:friendId`
+    - POST, DELETE `/api/users/:thoughtId/reactions`
 
 
   ## License
   This application is covered under the [MIT License](LICENSE)
 
+  ---
+
+### Screenshots
+![Screeshot1](./GetUsers.png)
 ---
-![Screeshot1](./images/GET-Products.png)
----
-![Screenshot2](./images/POST-product.png)
+![Screenshot2](./getThoughts.png)
 
